@@ -1,5 +1,9 @@
 BEGIN;
 
+CREATE TABLE Metadata (
+    challenge BLOB NOT NULL
+);
+
 CREATE TABLE EntryGroup (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     data BLOB NOT NULL

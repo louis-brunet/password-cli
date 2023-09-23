@@ -7,10 +7,13 @@ edition = "2021"
 
 [dependencies]
 aes-gcm = "0.10.2"
+axum = "0.6.20"
 ciborium = "0.2.1"
-clap = { version = "4.4.0", features = ["derive"] }
+clap = { version = "4.4.0", features = ["derive", "env"] }
+clap_complete = "4.4.0"
 dotenv = "0.15.0"
 env_logger = "0.10.0"
+fallible-iterator = "0.2.0"
 hmac-sha256 = "1.1.7"
 log = "0.4.20"
 rpassword = "7.2.0"
