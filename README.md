@@ -9,14 +9,18 @@ Entry  *<------>1     Group
 Group  *<------>0..1  Group
 ```
 
-User data is encrypted in a SQLite database. 
-
+User data is symmetrically encrypted with the user's master password. 
 
 ```sql
 CREATE TABLE Entry (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     group_id INTEGER NOT NULL REFERENCES EntryGroup(id),
-    data BLOB NOT NULL
+    data BLOB NOT NULL -- encrypted
+);
+
+CREATE TABLE EntryGroup (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    data BLOB NOT NULL -- encrypted
 );
 ```
 
